@@ -1,0 +1,14 @@
+plugins {
+    id 'com.github.blindpirate.gogradle' version '0.10.2'
+}
+
+golang {
+    packagePath = 'github.com/llamahunter/gogradle-example'
+}
+
+build {
+    // doesn't work
+    go 'build -o ./build cmd/prog/main.go'
+    // works
+    // go 'build -o ./build github.com/llamahunter/gogradle-example/cmd/prog'
+}
